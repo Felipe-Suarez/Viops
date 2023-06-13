@@ -43,8 +43,6 @@ export default function Page() {
     };
   }, [data]);
 
-  console.log(scroll);
-
   return (
     <div className={styles.fragment} style={{ left: scroll }}>
       <div className={styles.container}>

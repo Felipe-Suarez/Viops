@@ -18,11 +18,20 @@
   position: relative;
   min-width: 300px;
   max-width: 300px;
-  opacity: 0;
+}
+
+.showAnimation {
   animation-name: showArticle;
   animation-direction: normal;
   animation-duration: 0.5s;
   animation-fill-mode: forwards;
+}
+
+.showNormal {
+  animation-name: unset;
+  animation-direction: unset;
+  animation-duration: unset;
+  animation-fill-mode: unset;
 }
 
 @keyframes showArticle {

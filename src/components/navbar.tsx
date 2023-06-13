@@ -12,7 +12,7 @@ export default function Navbar() {
 
   return (
     <nav className={styles.nav}>
-      <ul className={styles.navList}>
+      <ul className={`${styles.navList} ${open && styles.showMenu}`}>
         <li>
           <Link href={"/about"}>NOSOTROS</Link>
         </li>

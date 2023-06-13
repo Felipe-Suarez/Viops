@@ -15,6 +15,8 @@
   z-index: 100;
   transform: translate(0, -100%);
   transition: transform 0.3s ease;
+  animation: showBtn 0.2s ease normal 2s forwards;
+  opacity: 0;
 }
 
 .showMenu {
@@ -79,8 +81,6 @@
     width: max-content;
     margin: auto;
     gap: 50px;
-    animation: showBtn 0.2s ease normal 2s forwards;
-    opacity: 0;
     background-color: transparent;
     transform: translate(0, 0);
   }

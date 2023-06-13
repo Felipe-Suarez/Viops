@@ -10,10 +10,21 @@ export default function Page() {
 
   useEffect(() => {
     const doc = document.documentElement;
+    const { scrollTop } = doc;
+
+    const calcScroll = (scrollTop: number) => {
+      if (window.innerWidth < 1000) {
+        setScroll(scrollTop - scrollTop * 2);
+      } else {
+        setScroll(scrollTop - scrollTop * 2 + window.innerWidth * 0.15);
+      }
+    };
+
     const handleScroll = () => {
       const { scrollTop } = doc;
-      setScroll(scrollTop);
+      calcScroll(scrollTop);
     };
+    calcScroll(scrollTop);
 
     if (window.innerWidth < 1000) {
       const firstElementWidth = 310;
@@ -32,16 +43,10 @@ export default function Page() {
     };
   }, [data]);
 
-  const calcScroll = () => {
-    if (window.innerWidth < 1000) {
-      return scroll - scroll * 2;
-    } else {
-      return scroll - scroll * 2 + window.innerWidth * 0.15;
-    }
-  };
+  console.log(scroll);
 
   return (
-    <div className={styles.fragment} style={{ left: calcScroll() }}>
+    <div className={styles.fragment} style={{ left: scroll }}>
       <div className={styles.container}>
         {data.map((item: any, i: number) => (
           <ArticleBox key={i} index={i} />

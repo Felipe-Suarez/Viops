@@ -26,3 +26,21 @@
   color: #fff;
   font-size: 18px;
 }
+
+.menuBtn::before {
+  content: "[";
+  position: absolute;
+  top: 7px;
+  left: 0;
+  transition: 0.5s;
+  font-size: 20px;
+}
+
+.menuBtn::after {
+  content: "]";
+  position: absolute;
+  top: 7px;
+  right: 0;
+  transition: 0.5s;
+  font-size: 20px;
+}

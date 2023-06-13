@@ -75,6 +75,7 @@
     gap: 50px;
     animation: showBtn 0.2s ease normal 2s forwards;
     opacity: 0;
+    background-color: transparent;
   }
 
   .navList::before {

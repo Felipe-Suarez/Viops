@@ -10,8 +10,7 @@
   align-items: center;
   gap: 30px;
   list-style: none;
-  backdrop-filter: blur(5px);
-  background-color: #000a;
+  background-color: #000;
   z-index: 100;
   transform: translate(0, -100%);
   transition: transform 0.3s ease;

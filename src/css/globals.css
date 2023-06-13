@@ -54,10 +54,50 @@ a:visited {
   align-items: center;
   position: relative;
   color: #fff;
-  border-top: 2px solid #fff;
-  border-bottom: 2px solid #fff;
+  border-top: 1px solid var(--color-secondary-text);
+  border-bottom: 1px solid var(--color-secondary-text);
   overflow: hidden;
   animation: load 1s ease normal 1s forwards;
+}
+
+.left::before {
+  content: "";
+  position: absolute;
+  top: -4px;
+  left: -4px;
+  background-color: var(--color-secondary-text);
+  width: 20px;
+  height: 8px;
+}
+
+.left::after {
+  content: "";
+  position: absolute;
+  bottom: -4px;
+  left: -4px;
+  background-color: var(--color-secondary-text);
+  width: 20px;
+  height: 8px;
+}
+
+.right::before {
+  content: "";
+  position: absolute;
+  top: -4px;
+  right: -4px;
+  background-color: var(--color-secondary-text);
+  width: 20px;
+  height: 8px;
+}
+
+.right::after {
+  content: "";
+  position: absolute;
+  bottom: -4px;
+  right: -4px;
+  background-color: var(--color-secondary-text);
+  width: 20px;
+  height: 8px;
 }
 
 @keyframes load {

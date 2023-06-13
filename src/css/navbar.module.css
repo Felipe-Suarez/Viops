@@ -10,7 +10,9 @@
   align-items: center;
   gap: 30px;
   list-style: none;
-  background-color: #000;
+  backdrop-filter: blur(5px);
+  background-color: #000a;
+  z-index: 100;
 }
 
 .menuBtn {
@@ -25,6 +27,9 @@
   border: none;
   color: #fff;
   font-size: 18px;
+  z-index: 110;
+  animation: showBtn 0.2s ease normal 2s forwards;
+  opacity: 0;
 }
 
 .menuBtn::before {
@@ -43,4 +48,13 @@
   right: 0;
   transition: 0.5s;
   font-size: 20px;
+}
+
+@keyframes showBtn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }

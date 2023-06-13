@@ -23,4 +23,44 @@
 .button {
   border: 1px solid #fff;
   padding: 20px 40px;
+  position: relative;
+}
+
+.left::before {
+  content: "";
+  position: absolute;
+  top: -4px;
+  left: -4px;
+  background-color: #fff;
+  width: 8px;
+  height: 8px;
+}
+
+.left::after {
+  content: "";
+  position: absolute;
+  bottom: -4px;
+  left: -4px;
+  background-color: #fff;
+  width: 8px;
+  height: 8px;
+}
+.right::before {
+  content: "";
+  position: absolute;
+  top: -4px;
+  right: -4px;
+  background-color: #fff;
+  width: 8px;
+  height: 8px;
+}
+
+.right::after {
+  content: "";
+  position: absolute;
+  bottom: -4px;
+  right: -4px;
+  background-color: #fff;
+  width: 8px;
+  height: 8px;
 }

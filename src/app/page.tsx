@@ -9,7 +9,9 @@ export default function Home() {
         <h2 className={styles.subtitle}>MINIMALISTAS, FUNCIONALES Y ESTÉTICAS</h2>
       </div>
       <Link href={"/services"} className={styles.button}>
-        CONOCÉ EL PROCESO
+        <span className={styles.left}></span>
+        <span>CONOCÉ EL PROCESO</span>
+        <span className={styles.right}></span>
       </Link>
     </div>
   );

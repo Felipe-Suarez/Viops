@@ -58,3 +58,64 @@
     opacity: 1;
   }
 }
+
+@media screen and (min-width: 1000px) {
+  .menuBtn {
+    display: none;
+  }
+
+  .navList {
+    flex-direction: row;
+    top: 20px;
+    left: 0;
+    right: 0;
+    height: max-content;
+    width: max-content;
+    margin: auto;
+    gap: 50px;
+    animation: showBtn 0.2s ease normal 2s forwards;
+    opacity: 0;
+  }
+
+  .navList::before {
+    content: "[";
+    position: absolute;
+    top: -4px;
+    left: -30px;
+    transition: 0.5s;
+    font-size: 20px;
+  }
+
+  .navList::after {
+    content: "]";
+    position: absolute;
+    top: -4px;
+    right: -30px;
+    transition: 0.5s;
+    font-size: 20px;
+  }
+
+  .navList li {
+    position: relative;
+  }
+
+  .linkWithBars::before {
+    content: "||";
+    position: absolute;
+    top: 0px;
+    left: -30px;
+    transition: 0.5s;
+    font-size: 18px;
+    pointer-events: none;
+  }
+
+  .linkWithBars::after {
+    content: "||";
+    position: absolute;
+    top: 0px;
+    right: -30px;
+    transition: 0.5s;
+    font-size: 18px;
+    pointer-events: none;
+  }
+}

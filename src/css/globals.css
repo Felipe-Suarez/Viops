@@ -53,3 +53,9 @@ a:visited {
     height: 95%;
   }
 }
+
+@media screen and (min-width: 1000px) {
+  .container {
+    width: 1000px;
+  }
+}

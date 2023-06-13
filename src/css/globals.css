@@ -26,6 +26,7 @@ a:visited {
 
 .main {
   height: 100vh;
+  width: 100vw;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -33,6 +34,9 @@ a:visited {
   background-image: url("/imgs/bg.png");
   background-blend-mode: multiply;
   animation: moveImage 20s ease-in-out infinite;
+  position: fixed;
+  top: 0;
+  left: 0;
 }
 
 @keyframes moveImage {
@@ -111,6 +115,6 @@ a:visited {
 
 @media screen and (min-width: 1000px) {
   .container {
-    width: 1000px;
+    width: 70%;
   }
 }

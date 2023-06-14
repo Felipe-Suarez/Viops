@@ -28,6 +28,10 @@ a:visited {
   color: unset;
 }
 
+input:focus {
+  outline: none;
+}
+
 .main {
   height: 100vh;
   width: 100vw;

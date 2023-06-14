@@ -12,17 +12,15 @@ export default function ContextProvider({ children }: { children: ReactNode }) {
   const [open, setOpen] = useState(false);
   const [clickedMenu, setClickedMenu] = useState(false);
 
-  const handleOpen = () => {
-    setOpen(!open);
-    setClickedMenu(true);
-  };
+  const handleOpen = () => setOpen(!open);
+  const handleClickedMenu = () => setClickedMenu(true);
 
   useEffect(() => {
     setOpen(false);
   }, [pathname]);
 
   return (
-    <Context.Provider value={{ open, handleOpen, clickedMenu }}>
+    <Context.Provider value={{ open, handleOpen, clickedMenu, handleClickedMenu }}>
       <div className="container">
         <Navbar />
         <span className="left"></span>

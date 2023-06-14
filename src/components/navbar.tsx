@@ -8,29 +8,35 @@ import { Context } from "./context";
 
 export default function Navbar() {
   const context = useContext(Context);
-  const { open, handleOpen } = context;
+  const { open, handleOpen, handleClickedMenu } = context;
 
   return (
     <nav className={styles.nav}>
       <ul className={`${styles.navList} ${open && styles.showMenu}`}>
         <li>
-          <Link href={"/about"}>NOSOTROS</Link>
+          <Link href={"/about"} onClick={handleClickedMenu}>
+            NOSOTROS
+          </Link>
         </li>
         <li>
-          <Link href={"/services"} className={styles.linkWithBars}>
+          <Link href={"/services"} onClick={handleClickedMenu} className={styles.linkWithBars}>
             SERVICIOS
           </Link>
         </li>
         <li>
-          <Link href={"/portfolio"}>TRABAJOS</Link>
+          <Link href={"/portfolio"} onClick={handleClickedMenu}>
+            TRABAJOS
+          </Link>
         </li>
         <li>
-          <Link href={"/articles"} className={styles.linkWithBars}>
+          <Link href={"/articles"} onClick={handleClickedMenu} className={styles.linkWithBars}>
             ARTICULOS
           </Link>
         </li>
         <li>
-          <Link href={"/contact"}>CONTACT</Link>
+          <Link href={"/contact"} onClick={handleClickedMenu}>
+            CONTACT
+          </Link>
         </li>
       </ul>
       <button className={styles.menuBtn} onClick={handleOpen}>

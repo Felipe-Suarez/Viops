@@ -26,7 +26,7 @@ export default function Page() {
       placeholder: "Alphabet",
     },
     {
-      title: "como podemos ayudarte?",
+      title: "Cómo podemos ayudarte?",
       placeholder: "Necesito un sitio Web con tienda online",
     },
     {
